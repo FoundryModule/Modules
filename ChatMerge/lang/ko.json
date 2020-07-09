@@ -1,0 +1,10 @@
+{
+	"chtmrg.merge-on-s": "채팅 합치기 활성화",
+	"chtmrg.merge-on-l": "동일 인물의 채팅을 하나로 합칩니다.",
+    "chtmrg.dup-clean-s": "채팅 중복제거 활성화",
+    "chtmrg.dup-clean-l": "중복된 채팅이 있으면 삭제합니다.",
+    "chtmrg.merge-time-s": "시간 간격 설정",
+    "chtmrg.merge-time-l": "최대 어느 시간 간격의 두 메세지가 합쳐질 수 있는지 결정합니다.",
+    "chtmrg.merge-line-s": "줄 간격 설정",
+    "chtmrg.merge-line-l": "합쳐진 메세지 박스의 최대 줄 수를 설정합니다."
+}

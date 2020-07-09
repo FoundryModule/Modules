@@ -1,0 +1,30 @@
+{
+	"name": "ChatMerge",
+	"title": "Chat Merge",
+	"description": "Merges chat messages from a single speaker.",
+	"version": "0.1.0",
+	"minimumCoreVersion" : "0.6.0",
+	"compatibleCoreVersion": "0.6.4",
+	"author": "HelloWorld",
+
+	"esmodules": ["scripts/main.js"],
+	"styles": ["style.css"],
+	"socket": true,
+
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		},
+		{
+			"lang": "ko",
+			"name": "한국어 (Korean)",
+			"path": "lang/ko.json"
+		}
+	],
+
+	"url": "none",
+	"manifest": "none",
+	"download": "none"
+}
