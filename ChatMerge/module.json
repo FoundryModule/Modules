@@ -5,7 +5,7 @@
 	"version": "0.1.0",
 	"minimumCoreVersion" : "0.6.0",
 	"compatibleCoreVersion": "0.6.4",
-	"author": "HelloWorld",
+	"author": "3-Noob",
 
 	"esmodules": ["scripts/main.js"],
 	"styles": ["style.css"],
@@ -26,5 +26,5 @@
 
 	"url": "https://github.com/FoundryModule/Modules/tree/master/ChatMerge",
 	"manifest": "https://raw.githubusercontent.com/FoundryModule/Modules/master/ChatMerge/module.json",
-	"download": "none"
+	"download": "https://github.com/FoundryModule/Modules/blob/master/ChatMerge/ChatMerge.zip?raw=true"
 }
