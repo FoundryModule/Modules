@@ -25,6 +25,6 @@
 	],
 
 	"url": "none",
-	"manifest": "none",
+	"manifest": "https://raw.githubusercontent.com/FoundryModule/Modules/master/ChatMerge/module.json",
 	"download": "none"
 }
