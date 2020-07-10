@@ -49,8 +49,14 @@ export class ChatResolver {
             return;
         }
         
+        if(messageData.flags === undefined || messageData.flags === null) {
+           messageData.flags = {"CHTMRG_APPEND" : true, "CHTMRG_ORIGINAL" : messageData.content};
+        }
+       else {
+           messageData.flags = Object.assign(messageData.flags, {"CHTMRG_APPEND" : true, "CHTMRG_ORIGINAL" : messageData.content});
+       }
         messageData.content = game.chtmrg_lastmessage.data.content + "<br>" + messageData.content;
-        
+           
         game.chtmrg_lastmessage.delete();
         
         return;
@@ -62,7 +68,6 @@ export class ChatResolver {
            if(Math.abs(Array.from(game.messages)[game.messages.size-1].data.timestamp - Array.from(game.messages)[game.messages.size-2].data.timestamp) < 20) {
                 Array.from(game.messages)[game.messages.size-2].delete();
            }
-           
         }
            
         if(!CHTMRGSettings.getSetting(CHTMRG_OPTIONS.ENABLE_MERGE)) return;
@@ -87,9 +92,23 @@ export class ChatResolver {
             return;
         }
         
-        
         game.chtmrg_lastmessage = chatMessage;
         return;
 	}
+           
+   static onChatBubble(token, html, message, {emote=false}={}) {
+       if(!CHTMRGSettings.getSetting(CHTMRG_OPTIONS.SINGLE_BUBBLE)) return true;
+           
+       if(game.chtmrg_lastmessage.data.flags["CHTMRG_APPEND"] === true) {
+            if((message.match(/<br \/>/g) || []).length > 0) {
+                var temp = game.chtmrg_lastmessage.data.content;
+                game.chtmrg_lastmessage.data.content = game.chtmrg_lastmessage.data.flags["CHTMRG_ORIGINAL"];
+                game.messages.sayBubble(game.chtmrg_lastmessage);
+                game.chtmrg_lastmessage.data.content = temp;
+                return false;
+            }
+       }
+       return true;
+   }
 
 }

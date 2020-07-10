@@ -1,6 +1,7 @@
 export const CHTMRG_OPTIONS = {
 	ENABLE_MERGE: "enableMerge",
     DUP_CLEAN: "dupClean",
+    SINGLE_BUBBLE: "singleBubble",
 	MERGE_TIME: "mergeTime",
     MERGE_LINE: "mergeLine"
 }
@@ -12,7 +13,7 @@ export class CHTMRGSettings {
 			hint: "chtmrg.merge-on-l",
 			scope: "world",
 			config: true,
-			default: false,
+			default: true,
 			type: Boolean,
 			onChange: enableMerge => window.location.reload()
 		});
@@ -22,7 +23,17 @@ export class CHTMRGSettings {
             hint: "chtmrg.dup-clean-l",
             scope: "world",
             config: true,
-            default: false,
+            default: true,
+            type: Boolean,
+            onChange: enableMerge => window.location.reload()
+        });
+        
+        game.settings.register("ChatMerge", CHTMRG_OPTIONS.SINGLE_BUBBLE, {
+            name: "chtmrg.single-bubble-s",
+            hint: "chtmrg.single-bubble-l",
+            scope: "world",
+            config: true,
+            default: true,
             type: Boolean,
             onChange: enableMerge => window.location.reload()
         });

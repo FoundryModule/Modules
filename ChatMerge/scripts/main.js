@@ -9,3 +9,4 @@ Hooks.once('init', () => {
 
 Hooks.on('preCreateChatMessage', ChatResolver.resolvePreCreateMessage);
 Hooks.on('renderChatMessage', ChatResolver.onRenderChatMessage);
+Hooks.on('chatBubble', ChatResolver.onChatBubble);

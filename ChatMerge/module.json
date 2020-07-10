@@ -2,7 +2,7 @@
     "name": "ChatMerge",
     "title": "Chat Merge",
     "description": "Merges chat messages from a single speaker.",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "minimumCoreVersion" : "0.6.0",
     "compatibleCoreVersion": "0.6.4",
     "author": "3-Noob",

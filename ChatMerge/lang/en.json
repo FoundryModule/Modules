@@ -3,6 +3,8 @@
     "chtmrg.merge-on-l": "Merges two messages into one.",
     "chtmrg.dup-clean-s": "Remove Duplicated Chat",
     "chtmrg.dup-clean-l": "Removes the chat which is duplicated.",
+    "chtmrg.single-bubble-s": "Chat Bubble Mode",
+    "chtmrg.single-bubble-l": "If enabled, it shows only updated message in the chat bubble. Otherwise, it shows entire message block in the chat bubble.",
     "chtmrg.merge-time-s": "Maximum Time Period",
     "chtmrg.merge-time-l": "Determines how much time period can be accepted to merging.",
     "chtmrg.merge-line-s": "Maximum Lines",
