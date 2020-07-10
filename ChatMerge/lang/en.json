@@ -4,7 +4,7 @@
     "chtmrg.dup-clean-s": "Remove Duplicated Chat",
     "chtmrg.dup-clean-l": "Removes the chat which is duplicated.",
     "chtmrg.merge-time-s": "Maximum Time Period",
-    "chtmrg.merge-time-l": "Determines how much time period can be accepted to merge.",
+    "chtmrg.merge-time-l": "Determines how much time period can be accepted to merging.",
     "chtmrg.merge-line-s": "Maximum Lines",
-    "chtmrg.merge-line-l": "Determines how many lines can be accepted to mergine."
+    "chtmrg.merge-line-l": "Determines how many lines can be accepted to merging."
 }
