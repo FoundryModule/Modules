@@ -1,14 +1,8 @@
 import { CHTMRGSettings, CHTMRG_OPTIONS } from "./settings.js";
 
-const CHAT_MESSAGE_TYPES = {
-	DESCRIPTION: '#CGMP_DESCRIPTION'
-}
-
 export class ChatResolver {
     
     static resolvePreCreateMessage(messageData) {
-        
-        console.log(messageData.content);
         
         if(!CHTMRGSettings.getSetting(CHTMRG_OPTIONS.ENABLE_MERGE)) return;
         
