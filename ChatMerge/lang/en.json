@@ -1,6 +1,6 @@
 {
     "chtmrg.merge-on-s": "Enable Chat Merge",
-    "chtmrg.merge-on-l": "Merges two messages into one.",
+    "chtmrg.merge-on-l": "Merges two messages from the same speaker into one.",
     "chtmrg.dup-clean-s": "Remove Duplicated Chat",
     "chtmrg.dup-clean-l": "Removes the chat which is duplicated.",
     "chtmrg.single-bubble-s": "Chat Bubble Mode",
