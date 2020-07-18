@@ -29,6 +29,14 @@ export class ChatResolver {
             }
         }
         
+        if(messageData.whisper != undefined) {
+            if(!messageData.whisper.equals(game.chtmrg_lastmessage.data.whisper) || messageData.user != game.chtmrg_lastmessage.data.user) {
+                game.chtmrg_flag = true;
+                game.chtmrg_lastmessage = {};
+                return;
+            }
+        }
+        
         if(messageData.isRoll) {
             game.chtmrg_flag = true;
             game.chtmrg_lastmessage = {};
@@ -65,30 +73,24 @@ export class ChatResolver {
     static onRenderChatMessage(chatMessage, html, messageData) {
         
         if(CHTMRGSettings.getSetting(CHTMRG_OPTIONS.DUP_CLEAN)) {
-           if(Math.abs(Array.from(game.messages)[game.messages.size-1].data.timestamp - Array.from(game.messages)[game.messages.size-2].data.timestamp) < 20) {
-                Array.from(game.messages)[game.messages.size-2].delete();
+           var msg1 = Array.from(game.messages)[game.messages.size-1];
+           var msg2 = Array.from(game.messages)[game.messages.size-2];
+           if(msg1 != undefined && msg2 != undefined) {
+               if(msg1.data.user == msg2.data.user) {
+                   if(Math.abs(msg1.data.timestamp - msg2.data.timestamp) < 30) {
+                        msg2.delete();
+                   }
+               }
            }
         }
            
         if(!CHTMRGSettings.getSetting(CHTMRG_OPTIONS.ENABLE_MERGE)) return;
         
         let message = messageData.message;
-        
-        if(chatMessage.isRoll) {
-            game.chtmrg_lastmessage = {};
-            game.chtmrg_flag = true;
-            return;
-        }
-        
+           
         if(game.chtmrg_flag) {
             game.chtmrg_lastmessage = chatMessage;
             game.chtmrg_flag = false;
-            return;
-        }
-        
-        if(game.chtmrg_lastmessage.alias != chatMessage.alias) {
-            game.chtmrg_lastmessage = {};
-            game.chtmrg_flag = true;
             return;
         }
         

@@ -2,9 +2,9 @@
     "name": "ChatMerge",
     "title": "Chat Merge",
     "description": "Merges chat messages from the same speaker.",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "minimumCoreVersion" : "0.6.0",
-    "compatibleCoreVersion": "0.6.4",
+    "compatibleCoreVersion": "0.6.5",
     "author": "Hello World",
 
     "esmodules": ["scripts/main.js"],
