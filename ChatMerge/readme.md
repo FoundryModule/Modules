@@ -8,6 +8,6 @@ You can toggle how to show token chat bubble. When two messages are merged, you 
 
 ### Options
 
-![OPTION](./ChatMerge/options.png)
+![OPTION](./options.png)
 
 Manifest : https://raw.githubusercontent.com/FoundryModule/Modules/master/ChatMerge/module.json
