@@ -43,6 +43,12 @@ export class ChatResolver {
             return;
         }
         
+        if(game.chtmrg_lastmessage.isRoll) {
+            game.chtmrg_flag = true;
+            game.chtmrg_lastmessage = {};
+            return;
+        }
+        
         if((Date.now() - game.chtmrg_lastmessage.data.timestamp) / 1000 > CHTMRGSettings.getSetting(CHTMRG_OPTIONS.MERGE_TIME)) {
             game.chtmrg_flag = true;
             game.chtmrg_lastmessage = {};
