@@ -37,7 +37,7 @@ export class ChatResolver {
             }
         }
         
-        if(messageData.isRoll) {
+        if(messageData.roll != undefined) {
             game.chtmrg_flag = true;
             game.chtmrg_lastmessage = {};
             return;
