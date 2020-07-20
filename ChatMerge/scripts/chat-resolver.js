@@ -36,6 +36,11 @@ export class ChatResolver {
                 return;
             }
         }
+        else if (![].equals(game.chtmrg_lastmessage.data.whisper)) {
+            game.chtmrg_flag = true;
+            game.chtmrg_lastmessage = {};
+            return;
+        }
         
         if(messageData.roll != undefined) {
             game.chtmrg_flag = true;
