@@ -28,7 +28,19 @@ export class ChatResolver {
                 return;
             }
         }
-        
+
+	if (messageData.type === 0) {
+            game.chtmrg_flag = true;
+            game.chtmrg_lastmessage = {};
+            return;
+        }
+
+        if (messageData.type !== game.chtmrg_lastmessage.data.type) {
+            game.chtmrg_flag = true;
+            game.chtmrg_lastmessage = {};
+            return;
+        }
+
         if(messageData.whisper != undefined) {
             if(!messageData.whisper.equals(game.chtmrg_lastmessage.data.whisper) || messageData.user != game.chtmrg_lastmessage.data.user) {
                 game.chtmrg_flag = true;
