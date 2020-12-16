@@ -4,7 +4,7 @@
     "description": "Merges chat messages from the same speaker.",
     "version": "0.2.4",
     "minimumCoreVersion" : "0.6.0",
-    "compatibleCoreVersion": "0.7.0",
+    "compatibleCoreVersion": "0.7.8",
     "author": "Hello World",
 
     "esmodules": ["scripts/main.js"],
