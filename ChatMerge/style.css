@@ -74,3 +74,6 @@
 	20%  {bottom: 5px;}
 	40%  {bottom: 0px;}
 }
+.message-content {
+	word-break: break-all;
+}

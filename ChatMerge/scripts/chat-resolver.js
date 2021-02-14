@@ -4,6 +4,10 @@ export class ChatResolver {
     
     static resolvePreCreateMessage(messageData) {
         
+        messageData.content = messageData.content.replace(/\*\*(.*)\*\*/g,"<b>$1</b>");
+        messageData.content = messageData.content.replace(/\*(.*)\*/g,"<i>$1</i>");
+        messageData.content = messageData.content.replace(/( )(?![^<]*>|[^<>]*<)/g,"&nbsp;");
+        
         if(!CHTMRGSettings.getSetting(CHTMRG_OPTIONS.ENABLE_MERGE)) return;
         
         if(game.chtmrg_flag) return;
@@ -29,7 +33,7 @@ export class ChatResolver {
             }
         }
 
-	if (messageData.type === 0) {
+	    if (messageData.type === 0) {
             game.chtmrg_flag = true;
             game.chtmrg_lastmessage = {};
             return;
@@ -118,6 +122,7 @@ export class ChatResolver {
         }
         
         game.chtmrg_lastmessage = chatMessage;
+
         return;
 	}
            
