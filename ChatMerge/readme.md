@@ -6,6 +6,8 @@ There is two optional features, removing duplicated chat and chat bubble mode.
 
 You can toggle how to show token chat bubble. When two messages are merged, you can choose whether it shows only last one or entire one.
 
+Italic(\* text \*), bold (\*\* text \*\*) or both (\*\*\* text \*\*\*) are supported additionally.
+
 ### Options
 
 ![OPTION](./options.png)
